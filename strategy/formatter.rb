@@ -5,13 +5,13 @@ class Formatter
 end
 
 class HTMLFormatter < Formatter
-  def output_report(title, text)
+  def output_report(context)
     puts('<HTML>')
     puts('  <head>')
-    puts("  <title>#{title}</title>")
+    puts("  <title>#{context.title}</title>")
     puts('  </head>')
     puts('  <body>')
-    text.each do  |line|
+    context.text.each do  |line|
       puts("  <p>#{line}</p>")
     end
     puts(' </body>')
@@ -20,9 +20,9 @@ class HTMLFormatter < Formatter
 end
 
 class PlainTextFormatter < Formatter
-  def output_report(title, text)
-    puts("**** #{title} ****")
-    text.each do |line|
+  def output_report(context)
+    puts("**** #{context.title} ****")
+    context.text.each do |line|
       puts(line)
     end
   end
