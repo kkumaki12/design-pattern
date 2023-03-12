@@ -1,16 +1,16 @@
 class Pond
   def initialize(number_ducks)
-    @ducks = []
+    @animals = []
     number_ducks.times do |i|
-      new_animal = new_animal("動物#{i}")
-      @ducks << duck
+      animal = new_animal("動物#{i}")
+      @animals << animal
     end
   end
 
   def simulate_one_day
-    @ducks.each { |duck| duck.speak}
-    @ducks.each { |duck| duck.eat}
-    @ducks.each { |duck| duck.sleep}
+    @animals.each { |animal| animal.speak}
+    @animals.each { |animal| animal.eat}
+    @animals.each { |animal| animal.sleep}
   end
 end
 
