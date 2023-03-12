@@ -1,9 +1,3 @@
-class Formatter
-  def output_report(title, text)
-    raise 'Abstract method called'
-  end
-end
-
 class HTMLFormatter < Formatter
   def output_report(context)
     puts('<HTML>')
